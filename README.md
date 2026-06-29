@@ -1,5 +1,7 @@
 # Candidate Ranking System
 
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shivv23/candidate-ranker-system/blob/main/sandbox.ipynb)
+
 India Runs Data & AI Challenge 2026 — Ranking 100K candidates against a Senior AI Engineer job description.
 
 ## Setup
