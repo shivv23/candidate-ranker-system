@@ -94,7 +94,8 @@ Eight scoring dimensions are fused linearly:
 ├── requirements.txt       # Dependencies
 ├── submission_metadata.yaml
 ├── deck/
-│   └── presentation.pptx
+│   ├── presentation.pptx  # Source deck (editable)
+│   └── presentation.pdf   # Exported PDF for submission
 ├── src/
 │   ├── config.py          # Weights, thresholds, skill lists, company lists
 │   ├── loader.py          # JSONL/JSON loader
