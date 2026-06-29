@@ -1,0 +1,54 @@
+team_name: "shivv23"
+
+primary_contact:
+  name: "Shivam Kumar"
+  email: "shivamkumar0423@gmail.com"
+  phone: "+91-7667349750"
+
+team_members:
+  - name: "Shivam Kumar"
+    email: "shivamkumar0423@gmail.com"
+    role: "Solo Participant"
+
+github_repo: "https://github.com/shivv23/candidate-ranker-system"
+
+sandbox_link: "https://colab.research.google.com/github/shivv23/candidate-ranker-system/blob/master/sandbox.ipynb"
+
+reproduce_command: "python precompute.py && python rank.py"
+
+compute:
+  platform: "Local Laptop (AMD Ryzen 7 7840U)"
+  cpu_cores: 8
+  ram_gb: 16
+  python_version: "3.13.0"
+  os: "Windows 11"
+  uses_gpu_for_inference: false
+  has_network_during_ranking: false
+  pre_computation_required: true
+  pre_computation_time_minutes: 42
+
+ai_tools_used:
+  - "GitHub Copilot"
+
+ai_usage_summary: |
+  GitHub Copilot used for code completion and minor debugging assistance.
+  All scoring logic, ranking methodology, and data processing were manually
+  implemented. No candidate data was fed to any external LLM.
+
+methodology_summary: |
+  Multi-factor candidate ranking system combining semantic similarity and
+  structured feature scoring. Phase A precomputes all-MiniLM-L6-v2 embeddings
+  and FAISS index for 100K candidates offline. Phase B embeds the JD query,
+  retrieves top-10K candidates by cosine similarity, then fuses 8 scoring
+  dimensions (semantic 20%, title 15%, skills 30%, experience 10%, signals 10%,
+  company 5%, location 5%, education 5%) with multiplicative modifiers for
+  honeypot penalty, notice period, and score spread.   Honeypot detection covers
+  keyword stuffing, AI skill stuffing, ghost profiles, inactivity, fake
+  company names, and all-consulting background filtering.
+
+declarations:
+  read_submission_spec: true
+  code_is_original_work: true
+  no_collusion: true
+  honeypot_check_done: true
+  reproduction_tested: true
